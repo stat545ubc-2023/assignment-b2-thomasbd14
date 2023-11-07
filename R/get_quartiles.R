@@ -21,12 +21,16 @@
 #' is not specified, the table will have one row representing the entire data. If
 #' `grouping_variable` is specified, each row shows the quartile within one
 #' unique category, which will be represented with an additional column.
+#' @export
+#'
+#' @importFrom stats quantile median
+#' @importFrom dplyr group_by summarize
+#' @importFrom magrittr %>%
 #'
 #' @examples
 #' get_quartiles(mtcars,wt) # Get the quartiles of weight over the whole dataset
 #' get_quartiles(mtcars,wt,cyl) # Get weight quartiles divided by number of cylinders
 #'
-#' @export
 
 get_quartiles <- function(data, summarized_variable, grouping_variable = NULL){
 
@@ -64,6 +68,6 @@ get_quartiles <- function(data, summarized_variable, grouping_variable = NULL){
   data %>% group_by({{grouping_variable}}) %>%
     summarize(lower_quartile = quantile({{summarized_variable}},0.25, na.rm = TRUE, names = FALSE),
               median = median({{summarized_variable}}, na.rm = TRUE),
-              upper_quartile = quantile({{summarized_variable}},0.75, , na.rm = TRUE, names = FALSE)
+              upper_quartile = quantile({{summarized_variable}},0.75, na.rm = TRUE, names = FALSE)
     )
 }
