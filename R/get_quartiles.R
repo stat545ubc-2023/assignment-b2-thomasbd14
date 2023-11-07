@@ -1,4 +1,4 @@
-#' @Title Get Quartiles
+#' Get Quartiles
 #'
 #' @description This function returns a table of the quartiles for a given
 #' numerical variable in a tibble, optionally divided into categories based on
