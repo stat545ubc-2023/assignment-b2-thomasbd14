@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-get quaRtiles allows you to easily view the quartiles of numerical data.
+getquaRtiles allows you to easily view the quartiles of numerical data.
 
 
 ## Installation
@@ -31,11 +31,16 @@ devtools::install_github("stat545ubc-2023/getquaRtiles", ref = "0.1.0")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
-
+The basic usage of getquaRtiles is as follows:
 ```{r example}
 library(getquaRtiles)
+
+# Inspect the dataset
 head(mtcars)
-get_quartiles(mtcars,wt) # Get the quartiles of weight over the whole dataset
-get_quartiles(mtcars,wt,cyl) # Get weight quartiles divided by number of cylinders
+
+# Let's get the quartiles of weight over the whole dataset
+get_quartiles(mtcars,wt)
+
+# Let's do the same thing, now splitting up the dataset by the number of cylinders 
+get_quartiles(mtcars,wt,cyl) 
 ```

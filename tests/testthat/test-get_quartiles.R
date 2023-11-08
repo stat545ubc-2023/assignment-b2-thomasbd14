@@ -65,3 +65,14 @@ test_that("Warning cases",{
   expect_warning(get_quartiles(na_in_summarized,values,categories),"removing NA values")
   expect_warning(get_quartiles(na_in_categories,values, categories), "NAs found in category variable. Treating these as a separate group")
 })
+
+
+#Clean up the created objects
+rm('no_category_test')
+rm('no_category_expect')
+rm('with_category_test')
+rm('with_categories_expect')
+rm('numerical_category_test')
+rm('numerical_category_expect')
+rm('na_in_summarized')
+rm('na_in_categories')
