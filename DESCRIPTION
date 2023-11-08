@@ -1,6 +1,6 @@
 Package: getquaRtiles
 Title: Quickly Compute Quartiles of Tidy Data
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: 
     person("Thomas", "Deckers", , "tdeckers@student.ubc.ca", role = c("aut", "cre")
            )

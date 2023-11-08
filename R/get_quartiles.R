@@ -65,9 +65,9 @@ get_quartiles <- function(data, summarized_variable, grouping_variable = NULL){
 
 
   #execute the function
-  data %>% group_by({{grouping_variable}}) %>%
-    summarize(lower_quartile = quantile({{summarized_variable}},0.25, na.rm = TRUE, names = FALSE),
-              median = median({{summarized_variable}}, na.rm = TRUE),
-              upper_quartile = quantile({{summarized_variable}},0.75, na.rm = TRUE, names = FALSE)
+  data %>% dplyr::group_by({{grouping_variable}}) %>%
+    dplyr::summarize(lower_quartile = stats::quantile({{summarized_variable}},0.25, na.rm = TRUE, names = FALSE),
+              median = stats::median({{summarized_variable}}, na.rm = TRUE),
+              upper_quartile = stats::quantile({{summarized_variable}},0.75, na.rm = TRUE, names = FALSE)
     )
 }

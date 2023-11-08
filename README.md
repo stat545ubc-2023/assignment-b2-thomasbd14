@@ -13,7 +13,7 @@ You can install the development version of getquaRtiles from
 
 ``` r
 # install.packages("devtools")
-devtools::install_github("stat545ubc-2023/getquaRtiles", ref = "0.1.0")
+devtools::install_github("stat545ubc-2023/getquaRtiles", ref = "0.1.1")
 ```
 
 ## Example
