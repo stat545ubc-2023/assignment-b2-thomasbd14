@@ -1,0 +1,41 @@
+---
+output: github_document
+---
+
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# getquaRtiles: Quickly Computing the Quartiles of Tidy Data
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+get quaRtiles allows you to easily view the quartiles of numerical data.
+
+
+## Installation
+
+You can install the development version of getquaRtiles from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("stat545ubc-2023/getquaRtiles", ref = "0.1.0")
+```
+
+## Example
+
+This is a basic example which shows you how to solve a common problem:
+
+```{r example}
+library(getquaRtiles)
+head(mtcars)
+get_quartiles(mtcars,wt) # Get the quartiles of weight over the whole dataset
+get_quartiles(mtcars,wt,cyl) # Get weight quartiles divided by number of cylinders
+```

@@ -1,6 +1,6 @@
 Package: getquaRtiles
-Title: Compute Quartiles of Tidy Data
-Version: 0.0.1
+Title: Quickly Compute Quartiles of Tidy Data
+Version: 0.1.0
 Authors@R: 
     person("Thomas", "Deckers", , "tdeckers@student.ubc.ca", role = c("aut", "cre")
            )
@@ -13,3 +13,7 @@ RoxygenNote: 7.2.3
 Imports:
   dplyr,
   magrittr
+Suggests: 
+    testthat (>= 3.0.0),
+    tibble
+Config/testthat/edition: 3
